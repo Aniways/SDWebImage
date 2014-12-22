@@ -192,7 +192,7 @@ BOOL ImageDataHasPNGPreffix(NSData *data) {
 }
 
 - (void)storeImage:(UIImage *)image forKey:(NSString *)key {
-    [self storeImage:image recalculateFromImage:YES imageData:nil forKey:key toDisk:YES];
+    [self storeImage:image recalculateFromImage:YES imageData:UIImagePNGRepresentation(image) forKey:key toDisk:YES];
 }
 
 - (void)storeImage:(UIImage *)image forKey:(NSString *)key toDisk:(BOOL)toDisk {

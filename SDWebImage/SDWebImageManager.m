@@ -62,7 +62,7 @@
 
 - (BOOL)cachedImageExistsForURL:(NSURL *)url {
     NSString *key = [self cacheKeyForURL:url];
-    __block BOOL isImageAvailable;
+    __block BOOL isImageAvailable = NO;
     
     [self.imageCache imageFromDiskCacheForKey:key completion:^(UIImage *image, NSData *imageData){
         if (imageData)
